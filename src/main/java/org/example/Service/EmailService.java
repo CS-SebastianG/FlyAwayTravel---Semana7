@@ -17,6 +17,7 @@ public class EmailService {
 
     private static final String EMAIL_DIRECTORY = "emails";
 
+    @Async
     public void sendBookingConfirmation(User user, Flight flight, Booking booking) {
         try {
             Path dir = Paths.get(EMAIL_DIRECTORY);
